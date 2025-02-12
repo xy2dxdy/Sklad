@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kpclient.controllers.ViewProductsController">
+    <children>
+        <AnchorPane layoutY="101.0" prefHeight="298.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView fx:id="view" prefHeight="298.0" prefWidth="700.0">
+              <columns>
+                  <TableColumn fx:id="supplier" prefWidth="102.39996182918549" text="Поставщик" />
+                <TableColumn fx:id="group" prefWidth="116.79999542236328" text="Группа товаров" />
+                <TableColumn fx:id="name" prefWidth="156.800048828125" text="Наименование" />
+                  <TableColumn fx:id="price" prefWidth="77.5999755859375" text="Стоимость" />
+                  <TableColumn fx:id="amount" prefWidth="84.79995727539062" text="Количество" />
+                  <TableColumn fx:id="date" prefWidth="164.79998779296875" text="Дата прихода" />
+              </columns>
+            </TableView>
+         </children>
+        </AnchorPane>
+        <Label layoutX="177.0" layoutY="20.0" text="Список товаров" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Garamond" size="48.0" />
+            </font>
+        </Label>
+          <Button fx:id="back" layoutX="21.0" layoutY="36.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Назад" textFill="WHITE">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+      <ComboBox fx:id="groupProducts" layoutX="517.0" layoutY="22.0" prefWidth="150.0" promptText="Раздел" style="-fx-background-color: #fafafa; -fx-border-color: silver;" />
+      <Button layoutX="536.0" layoutY="61.0" mnemonicParsing="false" onAction="#OnEditButtonClicked" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: white;" text="Edit" />
+      <Button layoutX="598.0" layoutY="61.0" mnemonicParsing="false" onAction="#OnDeleteButtonClicked" style="-fx-background-color: white;" text="Delete" />
+    </children>
+</AnchorPane>

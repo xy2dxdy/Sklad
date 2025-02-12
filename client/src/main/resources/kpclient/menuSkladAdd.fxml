@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kpclient.controllers.MainMenuAddController" >
+    <children>
+        <ButtonBar layoutX="14.0" layoutY="58.0" prefHeight="40.0" prefWidth="200.0" />
+        <ButtonBar layoutX="30.0" layoutY="39.0" prefHeight="322.0" prefWidth="146.0" />
+        <AnchorPane layoutY="101.0" prefHeight="298.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <Button fx:id="addProduct" layoutX="217.0" layoutY="50.0" mnemonicParsing="false" onAction="#OnAddProductButtonClicked" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #EDD19C; -fx-border-color: silver;" text="Добавление товара" AnchorPane.topAnchor="50.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="back" layoutX="554.0" layoutY="244.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Назад" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            <Button fx:id="addSupplier" layoutX="217.0" layoutY="187.0" mnemonicParsing="false" onAction="#OnAddSupplierClicked" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #EDD19C; -fx-border-color: silver;" text="Добавление поставщика" AnchorPane.topAnchor="187.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="addProductGroup" layoutX="217.0" layoutY="119.0" mnemonicParsing="false" onAction="#OnAddProductGroupClicked" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #EDD19C; -fx-border-color: silver;" text="Добавление группы товаров" AnchorPane.topAnchor="119.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="168.0" layoutY="20.0" text="Меню добавления" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Garamond" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

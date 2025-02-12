@@ -1,0 +1,27 @@
+package kpclient;
+
+import client.ServerClient;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+
+
+public class Client extends Application {
+    public static void main(String[] args) {
+        ServerClient serverClient = ServerClient.ConnectToServer();
+        launch();
+        serverClient.CloseConnection();
+    }
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Client.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 400);
+        stage.setTitle("Sklad");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+}

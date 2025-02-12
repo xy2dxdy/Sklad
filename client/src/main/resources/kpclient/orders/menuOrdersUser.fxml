@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kpclient.controllers.order.MenuOrdersUserController">
+    <children>
+      <AnchorPane layoutY="106.0" prefHeight="294.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <Accordion layoutX="311.0" layoutY="62.0" />
+              <Button layoutX="6.0" layoutY="240.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Назад" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Button>
+            <DatePicker fx:id="firstDate" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" promptText="с" />
+            <DatePicker fx:id="lastDate" layoutX="14.0" layoutY="47.0" prefHeight="26.0" prefWidth="124.0" promptText="по" />
+            <TableView fx:id="view" layoutX="155.0" prefHeight="294.0" prefWidth="545.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="205.59991455078125" text="Наименование товара" />
+                <TableColumn fx:id="amount" prefWidth="89.60003662109375" text="Количество" />
+                  <TableColumn fx:id="price" prefWidth="104.00003051757812" text="Стоимость" />
+                  <TableColumn fx:id="orderDate" prefWidth="150.39996337890625" text="Дата заказа" />
+              </columns>
+            </TableView>
+            <Button layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onAction="#OnSearchButtonClicked" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: green;" text="Поиск" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="69.0" layoutY="22.0" text="Меню действующих заказов" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Garamond" size="48.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

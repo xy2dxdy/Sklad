@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kpclient.controllers.CreateOrderController">
+    <children>
+        <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Назад" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <ComboBox fx:id="groupProducts" layoutX="199.0" layoutY="41.0" prefWidth="150.0" promptText="Раздел" style="-fx-background-color: #fafafa; -fx-border-color: silver;" />
+      <Button layoutX="554.0" layoutY="35.0" mnemonicParsing="false" onAction="#OnOrderButtonClicked" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #44944A;" text="Заказать" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="view" layoutY="101.0" prefHeight="298.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="name" prefWidth="356.00000607967377" text="Наименование" />
+            <TableColumn fx:id="price" prefWidth="195.19992065429688" text="Стоимость" />
+            <TableColumn fx:id="amount" prefWidth="149.60009765625" text="Количество" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>
